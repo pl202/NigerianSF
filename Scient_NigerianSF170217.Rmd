@@ -214,7 +214,7 @@ colnames(xt)<-c("Author","Title")
 kable(xt)
 ```
 
-Based on the works above, a database of scientist characters was constructed. It is available on GitHub, along with the code for this analysis in [R studio](https://www.rstudio.com/). 
+Based on the works above, a database of scientist characters was constructed. It is available on [GitHub](https://github.com/pl202/NigerianSF), along with the code for this analysis in [R studio](https://www.rstudio.com/). 
 
 
 ### Many of the scientist characters come from a single collection 
