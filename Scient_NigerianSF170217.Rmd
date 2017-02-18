@@ -99,10 +99,16 @@ Science fiction is a recent genre classification in Nigerian literature. Current
 
 # Research questions
 
-* What kind of generalizations can be made about representation of scientists in Nigerian Sci-Fi?
+* What kind of generalizations can be made about representation of scientists in Nigerian SF?
 * Considering the portraits of scientists, what can be said about the discourse on science?
     + On gender?
     + On technology?  
+
+
+# Introduction
+
+It is not widely known that Nigerian science fiction (Nigerian SF) exists, and so one of the first tasks of this thesis is to identify a corresponding body of literature. This requires qualifying the terms ‘Nigerian’ and ‘science fiction’. For this thesis, the term ‘Nigerian’ refers to the author and includes both residents of Nigeria and members of the diaspora. 
+
     
 
 ```{r fig.width=2}
@@ -141,11 +147,6 @@ img <- readPNG("NigeriansInSpace.png")
 grid.raster(img)
 
 ```
-
-
-# Introduction
-
-It is not widely known that Nigerian science fiction (Nigerian SF) exists, and so one of the first tasks of this thesis is to identify a corresponding body of literature. This requires qualifying the terms ‘Nigerian’ and ‘science fiction’. For this thesis, the term ‘Nigerian’ refers to the author and includes both residents of Nigeria and members of the diaspora. 
 
 ### Who is a Nigerian author?
 
@@ -200,9 +201,9 @@ The immediate consequence of defining Nigerian SF in this way is to narrow a lis
 
 ### List of works analysed
 
-Identifying literary sources containing scientists is a time-consuming task. For this aspect of research, social media proved valuable, in particular, the ‘African Science Fiction and Fantasy’ Facebook group, which brings together many African writers and academics.
+Identifying literary sources containing scientists is a time-consuming task. For this aspect of research, social media proved valuable, in particular, the [‘African Science Fiction and Fantasy’](https://www.facebook.com/groups/african.fantasy/) Facebook group, which brings together many African writers and academics.
 
-Online African literary communities such as BrittlePaper, Omenana, Chimurenga, Sabara and Jalada all publish science fiction, but only a small proportion of those are by Nigerian authors that contain relevant characters. The difficulty was sorting through a lot of material, discovering if the author was Nigerian, if the genre was identified as science fiction and, finally, if it contained sufficiently interesting characters who are scientists. Some of the characters were omitted if they bore little relevance to the discourse about science or scientists.
+Online African literary communities such as [BrittlePaper](http://brittlepaper.com/), [Omenana](https://omenana.com/), [Chimurenga](http://www.chimurenga.co.za/), [Saraba](http://www.sarabamag.com/) and [Jalada](http://www.jalada.org/festival/schedule/) all publish science fiction, but only a small proportion of those are by Nigerian authors that contain relevant characters. The difficulty was sorting through a lot of material, discovering if the author was Nigerian, if the genre was identified as science fiction and, finally, if it contained sufficiently interesting characters who are scientists. Some of the characters were omitted if they bore little relevance to the discourse about science or scientists.
 
 The sources considered for this analysis are listed in the table below. 
 
@@ -226,7 +227,7 @@ Representations of scientists in fiction and film are of interest in their own r
 
 Researchers generally agree that fictional representations can draw critical attention to issues that are neglected in society. For example, Kurzinger et al. (2009) meta-analysis reveals a tendency of science fiction to ‘foreground questions of distribution, democracy and accountability’, and to highlight unpredictability of research, producing scenarios where control of science and technology is elusive. In explaining a motivation for her seminal study ‘From Faust to Strangelove: representations of the Scientist in Western Literature’ Roslynn D. Haynes offers the view that ‘writers are reflecting more or less faithfully the attitudes of their society towards actual science and scientists’ (p. 5).
 
-```{r fig.width=2, fig.height=3,echo=FALSE}
+```{r fig.width=4, fig.height=4,echo=FALSE}
 
 img <- readPNG("Haynes.png")
 grid.raster(img)
