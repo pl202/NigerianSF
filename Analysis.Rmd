@@ -100,9 +100,10 @@ Science fiction is a recent genre classification in Nigerian literature. Current
 # Research questions
 
 * What kind of generalizations can be made about representation of scientists in Nigerian SF?
-* Considering the portraits of scientists, what can be said about the discourse on science?
-    + On gender?
-    + On technology?  
+* Considering the portraits of scientists, what can be said about the discourse on science:
+    + women in science
+    + the promise of technology 
+    + ethics and regulation of research.
 
 
 # Introduction
@@ -153,6 +154,38 @@ grid.raster(img)
 
 All the authors represented in this thesis are either Nigerian citizens or first-generation Nigerians living in the diaspora who maintain links with Nigerian cultural life. 
 
+
+### What is considered science fiction?
+
+For the second term, ‘science fiction’, I am relying on the publishing industry’s definition, using those literary sources that are marketed as ‘science fiction’. Comic books, graphic novels, art, film or science fiction sources in the media other than the written word are excluded from the analysis.
+
+The immediate consequence of defining Nigerian SF in this way is to narrow a list of eligible publications, enabling a survey of a large proportion of relevant works, both in paper or purely digital formats. The objective of this survey was to identify scientist characters. The works that don’t contain scientists are not discussed. 
+
+### List of works analysed
+
+Identifying literary sources containing scientists is a time-consuming task. For this aspect of research, social media proved valuable, in particular, the [‘African Science Fiction and Fantasy’](https://www.facebook.com/groups/african.fantasy/) Facebook group, which brings together many African writers and academics.
+
+Online African literary communities such as [BrittlePaper](http://brittlepaper.com/), [Omenana](https://omenana.com/), [Chimurenga](http://www.chimurenga.co.za/), [Saraba](http://www.sarabamag.com/) and [Jalada](http://www.jalada.org/festival/schedule/) all publish science fiction, but only a small proportion of those are by Nigerian authors that contain relevant characters. The difficulty was sorting through a lot of material, discovering if the author was Nigerian, if the genre was identified as science fiction and, finally, if it contained sufficiently interesting characters who are scientists. Some of the characters were omitted if they bore little relevance to the discourse about science or scientists.
+
+The sources considered for this analysis are listed in the table below. 
+
+
+*Table 1. A complete list of literary sources.*
+
+```{r sources}
+library(knitr)
+sc_s<-sc[!duplicated(sc$Source.Title),]
+xt<-cbind(as.character(sc_s$Auth.Name), toupper(sc_s$Source.Title))
+colnames(xt)<-c("Author","Title")
+kable(xt)
+```
+
+
+
+**Based on the works above, a database of scientist characters was constructed. It is available on [GitHub](https://github.com/pl202/NigerianSF), along with the code for this analysis in [R studio](https://www.rstudio.com/). Implicit in this analysis is a personal interpretation of these texts, however the data (['Scientists.csv'](https://github.com/pl202/NigerianSF)) can be modified by anyone with a different interpretation and the analysis rerun to reflect the changes using ['Analysis.Rmd'](https://github.com/pl202/NigerianSF) file.** 
+
+
+
 Interestingly, the proportion of authors living in Nigeria is very similar to the proportion of characters who are also Nigerian residents.
 
 ```{r resid, fig.height= 3}
@@ -196,34 +229,6 @@ print(p)
 ```
 
 ***Figure 2. Diaspora writers more likely to create scientist characters who live outside Nigeria.***
-
-### What is considered science fiction?
-
-For the second term, ‘science fiction’, I am relying on the publishing industry’s definition, using those literary sources that are marketed as ‘science fiction’. Comic books, graphic novels, art, film or science fiction sources in the media other than the written word are excluded from the analysis.
-
-The immediate consequence of defining Nigerian SF in this way is to narrow a list of eligible publications, enabling a survey of a large proportion of relevant works, both in paper or purely digital formats. The objective of this survey was to identify scientist characters. The works that don’t contain scientists are not discussed. 
-
-### List of works analysed
-
-Identifying literary sources containing scientists is a time-consuming task. For this aspect of research, social media proved valuable, in particular, the [‘African Science Fiction and Fantasy’](https://www.facebook.com/groups/african.fantasy/) Facebook group, which brings together many African writers and academics.
-
-Online African literary communities such as [BrittlePaper](http://brittlepaper.com/), [Omenana](https://omenana.com/), [Chimurenga](http://www.chimurenga.co.za/), [Saraba](http://www.sarabamag.com/) and [Jalada](http://www.jalada.org/festival/schedule/) all publish science fiction, but only a small proportion of those are by Nigerian authors that contain relevant characters. The difficulty was sorting through a lot of material, discovering if the author was Nigerian, if the genre was identified as science fiction and, finally, if it contained sufficiently interesting characters who are scientists. Some of the characters were omitted if they bore little relevance to the discourse about science or scientists.
-
-The sources considered for this analysis are listed in the table below. 
-
-
-*Table 1. A complete list of literary sources.*
-
-```{r sources}
-library(knitr)
-sc_s<-sc[!duplicated(sc$Source.Title),]
-xt<-cbind(as.character(sc_s$Auth.Name), toupper(sc_s$Source.Title))
-colnames(xt)<-c("Author","Title")
-kable(xt)
-```
-
-Based on the works above, a database of scientist characters was constructed. It is available on [GitHub](https://github.com/pl202/NigerianSF), along with the code for this analysis in [R studio](https://www.rstudio.com/). 
-
 
 ### Many of the scientist characters come from a single collection 
 ![](Lagos_2060.png) 
@@ -281,7 +286,7 @@ The focus on area of expertise and gender is the basis for the analysis of repre
 
 ## Gender
 
-One of the first things which stands out from the data is the gender imbalance. Women are underreprested both amongst the authors and the amongst the scientist characters.
+One of the first things which stands out from the data is the gender imbalance. Women are underrepresented both amongst the authors and the amongst the scientist characters.
 
 ### Where are the female scientists? 
 
@@ -312,7 +317,7 @@ multiplot(g1, g2, cols=2)
 
 ***Figure 5.Gender proportions of authors and characters in the study. ***
 
-The two questions are related, as male authors are much more likely write male scientists.
+The two questions are related, as male authors are much more likely to write male scientists.
 
 ### The influence of author's gender 
 
@@ -455,7 +460,7 @@ There are perhaps too few geneticists in the sample to make generalizations, but
 
 Bumi in ‘The Book of Phoenix’ uses genetic research to track and identify humans with special abilities, and so does Mathew Halliday in ‘Ofe!’ - this is a strange coincidence. Surveillance is a strong theme in all three plots involving geneticists in Nigerian SF. In ‘The Book of Phoenix’ it is not just Bumi who is trying to keep track of her creation, it is ‘All of THEM, the “Big Eye” – the Tower 7 scientists, lab assistants, lab technicians, doctors, administrative workers, guards, and police.’ Phoenix, who was genetically engineered in Tower 7, recounts that everyone who worked in the tower watched the ‘speciMen’ all the time. Their attempted total surveillance and control inevitably failed, but their complicity justified in the mind of Phoenix their total extermination. 
 
-In ‘Ofe!’ another geneticist willing to conduct gruesome experiments on living human beings, Mathew Halliday, has used his research to survey the entire population of West Africa and to identify 13 individuals carrying alien genes that endow them with superhuman abilities. He manages to trap them in order to experiment on them, but they fight back and escape. 
+In ‘Ofe!’ another geneticist, Mathew Halliday, is willing to conduct gruesome experiments on living human beings and has used his research to survey the entire population of West Africa and to identify 13 individuals carrying alien genes that endow them with superhuman abilities. He manages to trap them in order to experiment on them, but they fight back and escape. 
 	
 	
 These similarities in the plots must speak to specific fears about genetics as knowledge that enables discrimination against people based on their genetic makeup, rather than on the basis of their character or actions. In Nigerian SF, genetics research is associated with enabling the government with new technologies of control and surveillance. 
